@@ -2796,31 +2796,54 @@ import javax.swing.event.CaretListener;
 // }
 // }
 
+// public class Daily_Code {
+//     public static void main(String[] args) {
+
+//         int[] prices = { 7, 1, 5, 3, 6, 4 };
+//         int max_profit = 0;
+//         int current_profit = 0;
+
+//         int cheapeast_stock = prices[0];
+
+//         for (int i = 0; i <= prices.length - 1; i++) {
+
+//             if (prices[i] < cheapeast_stock) {
+//                 cheapeast_stock = prices[i];
+
+//             }
+//             current_profit = prices[i] - cheapeast_stock;
+
+//             if (current_profit > max_profit) {
+
+//                 max_profit = current_profit;
+
+//             }
+
+//         }
+
+//         System.out.println(max_profit);
+//     }
+// }
+
+//217 contain duplicate
+
 public class Daily_Code {
     public static void main(String[] args) {
+        int[] nums = { 1, 2, 3, 1 };
 
-        int[] prices = { 7, 1, 5, 3, 6, 4 };
-        int max_profit = 0;
-        int current_profit = 0;
+        HashSet<Integer> digits = new HashSet<>();
 
-        int cheapeast_stock = prices[0];
+        for (int i = 0; i <= nums.length - 1; i++) {
 
-        for (int i = 0; i <= prices.length - 1; i++) {
+            if (digits.contains(nums[i])) {
+                // return true;
+                System.out.println("true");
 
-            if (prices[i] < cheapeast_stock) {
-                cheapeast_stock = prices[i];
-
-            }
-            current_profit = prices[i] - cheapeast_stock;
-
-            if (current_profit > max_profit) {
-
-                max_profit = current_profit;
-
+            } else {
+                digits.add(nums[i]);
             }
 
         }
 
-        System.out.println(max_profit);
     }
 }
