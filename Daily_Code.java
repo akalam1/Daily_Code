@@ -2827,21 +2827,54 @@ import javax.swing.event.CaretListener;
 
 //217 contain duplicate
 
+// public class Daily_Code {
+//     public static void main(String[] args) {
+//         int[] nums = { 1, 2, 3, 1 };
+
+//         HashSet<Integer> digits = new HashSet<>();
+
+//         for (int i = 0; i <= nums.length - 1; i++) {
+
+//             if (digits.contains(nums[i])) {
+//                 // return true;
+//                 System.out.println("true");
+
+//             } else {
+//                 digits.add(nums[i]);
+//             }
+
+//         }
+
+//     }
+// }
+
+//leeetcode 238
+
 public class Daily_Code {
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 1 };
 
-        HashSet<Integer> digits = new HashSet<>();
+        int[] nums = { 1, 2, 3, 4 };
 
-        for (int i = 0; i <= nums.length - 1; i++) {
+        int[] res = new int[nums.length];
 
-            if (digits.contains(nums[i])) {
-                // return true;
-                System.out.println("true");
+        int left = 1;
+        int right = 1;
 
-            } else {
-                digits.add(nums[i]);
-            }
+        for (int i = 0; i < nums.length; i++) {
+
+            res[i] = left;
+            left *= nums[i];
+
+        }
+
+        for (int j = nums.length - 1; j > -1; j--) {
+            res[j] *= right;
+            right *= nums[j];
+
+        }
+
+        for (int i : res) {
+            System.out.println(i);
 
         }
 
