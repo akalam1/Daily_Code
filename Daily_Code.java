@@ -2850,33 +2850,59 @@ import javax.swing.event.CaretListener;
 
 //leeetcode 238
 
+// public class Daily_Code {
+//     public static void main(String[] args) {
+
+//         int[] nums = { 1, 2, 3, 4 };
+
+//         int[] res = new int[nums.length];
+
+//         int left = 1;
+//         int right = 1;
+
+//         for (int i = 0; i < nums.length; i++) {
+
+//             res[i] = left;
+//             left *= nums[i];
+
+//         }
+
+//         for (int j = nums.length - 1; j > -1; j--) {
+//             res[j] *= right;
+//             right *= nums[j];
+
+//         }
+
+//         for (int i : res) {
+//             System.out.println(i);
+
+//         }
+
+//     }
+// }
+
+//53. Maximum Subarray
+
 public class Daily_Code {
     public static void main(String[] args) {
+        int[] nums = { 1};
 
-        int[] nums = { 1, 2, 3, 4 };
+        int max_sum = nums[0];
+        int current_sum = max_sum;
 
-        int[] res = new int[nums.length];
+        for (int i = 1; i <=nums.length-1; i++) {
 
-        int left = 1;
-        int right = 1;
+            current_sum = Math.max(current_sum + nums[i], nums[i]);
 
-        for (int i = 0; i < nums.length; i++) {
+            if (current_sum > max_sum) {
 
-            res[i] = left;
-            left *= nums[i];
+                max_sum = current_sum;
 
-        }
-
-        for (int j = nums.length - 1; j > -1; j--) {
-            res[j] *= right;
-            right *= nums[j];
+            }
 
         }
 
-        for (int i : res) {
-            System.out.println(i);
-
-        }
+        System.out.println(max_sum);
 
     }
 }
