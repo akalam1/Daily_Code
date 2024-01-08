@@ -2909,32 +2909,45 @@ import javax.swing.event.CaretListener;
 
 //152. Maximum Product Subarray
 
+// public class Daily_Code {
+//     public static void main(String[] args) {
+//         int[] nums = { 0,2 };
+
+//         int max_sum = nums[0];
+//         int right_sum = 1;
+//         int left_sum = 1;
+//         for (int i = 0, j = nums.length - 1; i < nums.length; i++, j--) {
+
+//             if (left_sum == 0) {
+//                 left_sum = 1;
+
+//             }
+//             if (right_sum == 0) {
+//                 right_sum = 1;
+//             }
+
+//             left_sum *= nums[i];
+//             right_sum *= nums[j];
+
+//             max_sum = Math.max(max_sum, Math.max(left_sum, right_sum));
+
+//         }
+
+//         System.out.println(max_sum);
+
+//     }
+
+// }
+
 public class Daily_Code {
     public static void main(String[] args) {
-        int[] nums = { 0,2 };
+        int[] nums = { 3, 4, 5, 1, 2 };
 
-        int max_sum = nums[0];
-        int right_sum = 1;
-        int left_sum = 1;
-        for (int i = 0, j = nums.length - 1; i < nums.length; i++, j--) {
 
-            if (left_sum == 0) {
-                left_sum = 1;
+       Arrays.sort(nums);
 
-            }
-            if (right_sum == 0) {
-                right_sum = 1;
-            }
+        int ans =nums[0];
 
-            left_sum *= nums[i];
-            right_sum *= nums[j];
-
-            max_sum = Math.max(max_sum, Math.max(left_sum, right_sum));
-
-        }
-
-        System.out.println(max_sum);
-
+        System.out.println(ans);
     }
-
 }
