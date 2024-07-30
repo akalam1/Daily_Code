@@ -2939,15 +2939,72 @@ import javax.swing.event.CaretListener;
 
 // }
 
+// public class Daily_Code {
+//     public static void main(String[] args) {
+//         int[] nums = { 3, 4, 5, 1, 2 };
+
+//         Arrays.sort(nums);
+
+//         int ans = nums[0];
+
+//         System.out.println(ans);
+//     }
+// }
+
+// 33. Search in Rotated Sorted Array
+
+// public class Daily_Code {
+//     public static void main(String[] args) {
+
+//         int[] nums = { 4, 5, 6, 7, 0, 1, 2 };
+//         int target = 0;
+
+//         // first check which side is sorted
+//         // lets have two pointers to track the left and right
+//         int left = 0;
+//         int right = nums.length - 1;
+//         int midpoint = left + right / 2;
+
+//         // left is sorted assume
+//         if (nums[left] < nums[midpoint]) {
+
+//         }
+
+//     }
+// }
+
+//412
+
+/*answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
+answer[i] == "Fizz" if i is divisible by 3.
+answer[i] == "Buzz" if i is divisible by 5.
+answer[i] == i (as a string) if none of the above conditions are true. */
+
 public class Daily_Code {
     public static void main(String[] args) {
-        int[] nums = { 3, 4, 5, 1, 2 };
 
+        int n = 3;
 
-       Arrays.sort(nums);
+        for (int i = 1; i <= n; i++) {
 
-        int ans =nums[0];
+            if (i % 3 == 0 && i % 5 == 0) {
 
-        System.out.println(ans);
+                System.out.println("FizzBuzz");
+                // return "FizzBuzz";
+
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+                // retrun"Fizz";
+
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+
+            } else {
+                System.out.println(i);
+                // return i;
+            }
+
+        }
+
     }
 }
