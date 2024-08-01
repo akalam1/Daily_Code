@@ -2980,31 +2980,38 @@ answer[i] == "Fizz" if i is divisible by 3.
 answer[i] == "Buzz" if i is divisible by 5.
 answer[i] == i (as a string) if none of the above conditions are true. */
 
+// public class Daily_Code {
+//     public static void main(String[] args) {
+
+//         int n = 3;
+
+//         for (int i = 1; i <= n; i++) {
+
+//             if (i % 3 == 0 && i % 5 == 0) {
+
+//                 System.out.println("FizzBuzz");
+//                 // return "FizzBuzz";
+
+//             } else if (i % 3 == 0) {
+//                 System.out.println("Fizz");
+//                 // retrun"Fizz";
+
+//             } else if (i % 5 == 0) {
+//                 System.out.println("Buzz");
+
+//             } else {
+//                 System.out.println(i);
+//                 // return i;
+//             }
+
+//         }
+
+//     }
+// }
+
+//Blind 75
+
 public class Daily_Code {
     public static void main(String[] args) {
-
-        int n = 3;
-
-        for (int i = 1; i <= n; i++) {
-
-            if (i % 3 == 0 && i % 5 == 0) {
-
-                System.out.println("FizzBuzz");
-                // return "FizzBuzz";
-
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-                // retrun"Fizz";
-
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-
-            } else {
-                System.out.println(i);
-                // return i;
-            }
-
-        }
-
     }
 }
